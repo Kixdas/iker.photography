@@ -10,33 +10,24 @@
   <meta property="og:type" content="website">
   <style>
     :root{
-      --bg:#0b0b0f;--card:#12121a;--ink:#e8e8ef;--muted:#b0b0bf;
-      --accent:#ff2d55;--accent-2:#5ac8fa;--radius:18px;
+      --bg:#0b0b0f;--card:#12121a;--ink:#e8e8ef;--muted:#b0b0bf;--accent:#ff2d55;--accent-2:#5ac8fa;--radius:18px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--bg);
-      color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
     a{color:var(--accent-2);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;
-      position:sticky;top:0;background:rgba(11,11,15,.96);
-      backdrop-filter:saturate(140%) blur(6px);padding:16px 28px;
-      border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;background:rgba(11,11,15,.96);backdrop-filter:saturate(140%) blur(6px);padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
     .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
     .badge{font-size:12px;color:var(--muted)}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;
-      background:var(--accent);color:#fff;font-weight:700;border:0;cursor:pointer}
+    .btn{display:inline-block;padding:12px 16px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;border:0;cursor:pointer}
     .btn.secondary{background:#232334}
-    .hero{padding:80px 28px 32px;
-      background:radial-gradient(1200px 600px at 70% -20%,rgba(255,45,85,.15),transparent 60%),
-      radial-gradient(900px 480px at -10% -30%,rgba(90,200,250,.12),transparent 60%)}
+    .hero{padding:80px 28px 32px;background:radial-gradient(1200px 600px at 70% -20%,rgba(255,45,85,.15),transparent 60%),radial-gradient(900px 480px at -10% -30%,rgba(90,200,250,.12),transparent 60%)}
     .hero h1{font-size:42px;line-height:1.1;margin:0 0 8px}
     .hero p{margin:0 0 20px;color:var(--muted)}
     .cta{display:flex;gap:12px;flex-wrap:wrap}
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);
-      border-radius:var(--radius);overflow:hidden}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden}
     .gallery img{width:100%;height:100%;object-fit:cover;display:block}
     .g1{grid-column:span 7}
     .g2{grid-column:span 5}
@@ -52,25 +43,25 @@
     ul.clean{padding-left:18px;margin:10px 0}
     .note{font-size:13px;color:var(--muted)}
     form{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
-    input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;
-      background:#0e0e15;border:1px solid rgba(255,255,255,.12);color:var(--ink)}
+    input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;background:#0e0e15;border:1px solid rgba(255,255,255,.12);color:var(--ink)}
     label{font-size:14px;color:var(--muted)}
     .col6{grid-column:span 6}
     .col12{grid-column:span 12}
     @media (max-width:900px){.col6{grid-column:span 12}}
-    footer{padding:28px;color:var(--muted);text-align:center;
-      border-top:1px solid rgba(255,255,255,.06)}
-    .pill{display:inline-block;padding:6px 10px;border:1px solid rgba(255,255,255,.16);
-      border-radius:999px;font-size:12px;color:var(--muted)}
+    footer{padding:28px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+    .pill{display:inline-block;padding:6px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:12px;color:var(--muted)}
     .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+    .badge-best {display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700;background:#2a2a3a;color:white;border:1px solid rgba(255,255,255,.18);}
+    .badge-best.pulse {animation:pulse 2.2s ease-in-out infinite;}
+    @keyframes pulse {0%,100% {box-shadow:0 0 0 0 rgba(255,45,85,.0);}50% {box-shadow:0 0 0 6px rgba(255,45,85,.12);}}
+    .tier.emphasis {outline:2px solid rgba(255,45,85,.35);}
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" 
-           xmlns="http://www.w3.org/2000/svg">
-           <path d="M4 7h6l2-2h8v12h-6l-2 2H4z" stroke="white" stroke-width="1.5"/></svg>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h6l2-2h8v12h-6l-2 2H4z" stroke="white" stroke-width="1.5"/></svg>
       <span>Iker • Sports Photography</span>
       <span class="badge">Mission, TX | HS & MS Games</span>
     </div>
@@ -78,6 +69,7 @@
       <a class="pill" href="#pricing">Pricing</a>
       <a class="pill" href="#order">Order</a>
       <a class="pill" href="#portfolio">Portfolio</a>
+      <a class="pill" href="#about">About</a>
     </div>
   </header>
 
@@ -103,41 +95,45 @@
 
   <section id="pricing" class="wrap">
     <h2>Pricing</h2>
-    <p class="muted">Simple, transparent rates. Pay via Venmo, Cash App, or Zelle.</p>
+    <p class="muted">Transparent, simple pricing. Pay via Venmo, Cash App, or Zelle.</p>
     <div class="prices">
       <div class="card tier">
         <span class="pill">Student</span>
         <h3>Highlight Pack</h3>
-        <div class="price">$10</div>
+        <div class="price">$15</div>
         <ul class="clean">
           <li>3–5 edited photos of one player</li>
           <li>Web + print-ready files</li>
           <li>48–72h delivery</li>
         </ul>
       </div>
-      <div class="card tier">
-        <span class="pill">Parent Favorite</span>
+      <div class="card tier emphasis">
+        <span class="badge-best pulse">⭐ Best Deal</span>
         <h3>All-Game Pack</h3>
-        <div class="price">$20</div>
+        <div class="price">$35</div>
         <ul class="clean">
-          <li>Up to 10 edited photos</li>
+          <li>10–15 edited photos of one player</li>
           <li>Priority edits</li>
           <li>24–48h delivery</li>
         </ul>
       </div>
       <div class="card tier">
         <span class="pill">Season</span>
-        <h3>Season Pass</h3>
-        <div class="price">$50</div>
+        <h3>Season Pass (Home Games)</h3>
+        <div class="price">$125</div>
         <ul class="clean">
-          <li>All season photos of one player</li>
+          <li>All home games this season</li>
+          <li>10+ edited photos per game</li>
           <li>Private gallery link</li>
-          <li>Poster-ready file</li>
         </ul>
       </div>
     </div>
-    <p class="note">Personal use only (socials, family prints, recruiting).  
-    Team promos, merch, or fundraisers require a separate team license.</p>
+    <p class="note">Personal use only (socials, family prints, recruiting). Team promos, merch, or fundraisers require a separate team license.</p>
+  </section>
+
+  <section id="about" class="wrap">
+    <h2>About Me</h2>
+    <p>Hi, my name is <strong>Iker Guizar</strong>. I'm a student photographer at Sharyland ISD, part of the yearbook class, and currently the Student Council Historian. I love photography — capturing moments that actually mean something — and my goal is to give students and parents great photos at prices that make sense.</p>
   </section>
 
   <section id="order" class="wrap">
@@ -161,9 +157,9 @@
       </div>
       <div class="col6">
         <label>Package<select name="package" required>
-          <option value="Highlight $10">Highlight Pack — $10</option>
-          <option value="All-Game $20">All-Game Pack — $20</option>
-          <option value="Season $50">Season Pass — $50</option>
+          <option value="Highlight $15">Highlight Pack — $15</option>
+          <option value="All-Game $35">All-Game Pack — $35</option>
+          <option value="Season $125">Season Pass — $125</option>
         </select></label>
       </div>
       <div class="col12">
