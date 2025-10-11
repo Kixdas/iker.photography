@@ -1,183 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Iker | Sports Photography</title>
-  <meta name="description" content="Affordable, clutch game-day photos. Student-friendly pricing, parent-approved quality.">
-  <meta property="og:title" content="Iker | Sports Photography">
-  <meta property="og:description" content="Affordable, clutch game-day photos. Student-friendly pricing, parent-approved quality.">
-  <meta property="og:type" content="website">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Iker • Sports Photography</title>
+  <meta name="description" content="Game-day photos in Mission, TX — affordable, fast, and clean.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0b0f;--card:#12121a;--ink:#e8e8ef;--muted:#b0b0bf;--accent:#ff2d55;--accent-2:#5ac8fa;--radius:18px;
+      --red:#d81921; --red-dark:#a7141a; --ink:#0b0b0f; --ink-2:#15151b; --muted:#b7bcc4; --white:#fff;
+      --card:#121217; --border:rgba(255,255,255,.1); --radius:18px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
-    a{color:var(--accent-2);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:1100px;margin:0 auto;padding:28px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;position:sticky;top:0;background:rgba(11,11,15,.96);backdrop-filter:saturate(140%) blur(6px);padding:16px 28px;border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}
-    .badge{font-size:12px;color:var(--muted)}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;background:var(--accent);color:#fff;font-weight:700;border:0;cursor:pointer}
-    .btn.secondary{background:#232334}
-    .hero{padding:80px 28px 32px;background:radial-gradient(1200px 600px at 70% -20%,rgba(255,45,85,.15),transparent 60%),radial-gradient(900px 480px at -10% -30%,rgba(90,200,250,.12),transparent 60%)}
-    .hero h1{font-size:42px;line-height:1.1;margin:0 0 8px}
-    .hero p{margin:0 0 20px;color:var(--muted)}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
-    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);overflow:hidden}
-    .gallery img{width:100%;height:100%;object-fit:cover;display:block}
-    .g1{grid-column:span 7}
-    .g2{grid-column:span 5}
-    @media (max-width:900px){.g1,.g2{grid-column:span 12}}
-    section{padding:40px 28px}
-    h2{font-size:28px;margin:0 0 8px}
+    html,body{margin:0;background:var(--ink);color:var(--white);font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+    a{color:var(--white);text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;z-index:20;background:rgba(11,11,15,.9);
+      backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
+    .brand .dot{width:10px;height:10px;border-radius:999px;background:var(--red)}
+    .nav a.pill{padding:8px 12px;border:1px solid var(--border);border-radius:999px;color:#e9e9ef}
+    .nav a.pill:hover{border-color:rgba(255,255,255,.25)}
+    .hero{background:
+      radial-gradient(900px 500px at 80% -10%, rgba(216,25,33,.18), transparent 60%),
+      radial-gradient(900px 500px at -10% -30%, rgba(255,255,255,.06), transparent 60%);
+      padding:72px 24px 36px;border-bottom:1px solid var(--border)}
+    .hero h1{font-size:40px;line-height:1.1;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .btn{display:inline-block;background:var(--red);padding:12px 16px;border-radius:12px;font-weight:800}
+    .btn:hover{background:var(--red-dark)}
+    section{padding:40px 24px}
+    h2{font-size:28px;margin:0 0 10px}
     .muted{color:var(--muted)}
-    .prices{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
-    .tier{grid-column:span 4;padding:18px}
-    @media (max-width:900px){.tier{grid-column:span 12}}
-    .tier h3{margin:6px 0 6px}
-    .price{font-size:28px;font-weight:800}
-    ul.clean{padding-left:18px;margin:10px 0}
-    .note{font-size:13px;color:var(--muted)}
-    form{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
-    input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;background:#0e0e15;border:1px solid rgba(255,255,255,.12);color:var(--ink)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    /* Gallery */
+    .gallery .item{grid-column:span 6}@media (max-width:900px){.gallery .item{grid-column:span 12}}
+    .gallery img{width:100%;height:100%;display:block;object-fit:cover;aspect-ratio:4/3;cursor:pointer;transition:transform .2s ease}
+    .gallery img:hover{transform:scale(1.01)}
+    /* About */
+    .about{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .about .blurb{grid-column:span 7}
+    .about .facts{grid-column:span 5}
+    @media (max-width:900px){.about .blurb,.about .facts{grid-column:span 12}}
+    .facts li{margin:6px 0;color:#e6e6ef}
+    /* Contact */
+    form{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:10px}
     label{font-size:14px;color:var(--muted)}
-    .col6{grid-column:span 6}
-    .col12{grid-column:span 12}
+    input,textarea,select{width:100%;padding:12px;border-radius:12px;background:#0e0e15;color:var(--white);
+      border:1px solid var(--border)}
+    .col6{grid-column:span 6}.col12{grid-column:span 12}
     @media (max-width:900px){.col6{grid-column:span 12}}
-    footer{padding:28px;color:var(--muted);text-align:center;border-top:1px solid rgba(255,255,255,.06)}
-    .pill{display:inline-block;padding:6px 10px;border:1px solid rgba(255,255,255,.16);border-radius:999px;font-size:12px;color:var(--muted)}
-    .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-
-    .badge-best {display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700;background:#2a2a3a;color:white;border:1px solid rgba(255,255,255,.18);}
-    .badge-best.pulse {animation:pulse 2.2s ease-in-out infinite;}
-    @keyframes pulse {0%,100% {box-shadow:0 0 0 0 rgba(255,45,85,.0);}50% {box-shadow:0 0 0 6px rgba(255,45,85,.12);}}
-    .tier.emphasis {outline:2px solid rgba(255,45,85,.35);}
+    .note{font-size:13px;color:var(--muted)}
+    footer{padding:28px;border-top:1px solid var(--border);text-align:center;color:var(--muted)}
+    /* Lightbox */
+    .lb{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:20px}
+    .lb img{max-width:92vw;max-height:88vh;border-radius:14px}
+    .lb.show{display:flex}
+    .x{position:fixed;top:16px;right:20px;background:#000;border:1px solid var(--border);color:#fff;
+      border-radius:10px;padding:8px 10px;cursor:pointer}
+    /* Accent underline */
+    .uline{position:relative;display:inline-block}
+    .uline:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:3px;background:linear-gradient(90deg,var(--red),transparent)}
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h6l2-2h8v12h-6l-2 2H4z" stroke="white" stroke-width="1.5"/></svg>
-      <span>Iker • Sports Photography</span>
-      <span class="badge">Mission, TX | HS & MS Games</span>
-    </div>
-    <div class="flex">
-      <a class="pill" href="#pricing">Pricing</a>
-      <a class="pill" href="#order">Order</a>
-      <a class="pill" href="#portfolio">Portfolio</a>
-      <a class="pill" href="#about">About</a>
+    <div class="wrap nav">
+      <div class="brand"><span class="dot"></span><span>Iker • Sports Photography</span></div>
+      <nav class="links">
+        <a class="pill" href="#portfolio">Portfolio</a>
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <section class="hero wrap">
-    <h1>Game-day photos that don’t make you look mid.</h1>
-    <p>Fast turnarounds, student-friendly pricing, and shots that actually slap.</p>
-    <div class="cta">
-      <a class="btn" href="#order">Order Highlights</a>
-      <a class="btn secondary" href="#pricing">See Pricing</a>
+  <section class="hero">
+    <div class="wrap">
+      <h1><span class="uline">Game-day photos</span> that actually hit.</h1>
+      <p>Mission, TX • Middle & High School games • Fast turnarounds • Student-friendly pricing</p>
+      <a class="btn" href="#contact">Book a game</a>
     </div>
   </section>
 
-  <section id="portfolio" class="wrap">
-    <h2>Portfolio</h2>
-    <p class="muted">Recent highlights — previews are watermarked, delivered files are clean and high-res.</p>
-    <div class="grid gallery">
-      <div class="card g1"><img src="images/sample1.jpg" alt="Football sideline portrait"></div>
-      <div class="card g2"><img src="images/sample2.jpg" alt="Receiver catch"></div>
-      <div class="card g2"><img src="images/sample3.jpg" alt="Defense tackle"></div>
-      <div class="card g1"><img src="images/sample4.jpg" alt="Team huddle"></div>
+  <section id="portfolio">
+    <div class="wrap">
+      <h2>Portfolio</h2>
+      <p class="muted">A few favorites. Watermarked previews here — delivered files are clean and high-res.</p>
+      <div class="grid gallery">
+        <div class="item card"><img src="images/rattlers_41_celebration.jpg" alt="Touchdown celebration #41" /></div>
+        <div class="item card"><img src="images/rattlers_90_profile.jpg" alt="Sideline portrait #90 at dusk" /></div>
+        <div class="item card"><img src="images/rattlers_27_run.jpg" alt="#27 breaking outside with lead block" /></div>
+        <div class="item card"><img src="images/rattlers_13_point.jpg" alt="#13 pointing from the sideline" /></div>
+        <div class="item card"><img src="images/rattlers_9_breakaway.jpg" alt="#9 sprinting past defenders" /></div>
+        <div class="item card"><img src="images/rattlers_25_67_duo.jpg" alt="Rattlers 25 and 67 — David and Goliath" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About Me</h2>
+      <div class="about">
+        <div class="blurb card" style="padding:18px">
+          <p>Hi, I’m <strong>Iker Guizar</strong> — student photographer in Mission, TX. I shoot middle school and high school games and deliver fast, clean edits at prices that make sense. I’m in yearbook and serve as Student Council Historian, so I live on the sidelines capturing the moments people actually care about.</p>
+          <p class="muted">Goal: give players and families photos they’re proud to post, print, and keep.</p>
+        </div>
+        <div class="facts card" style="padding:18px">
+          <ul>
+            <li>Turnaround: 24–72 hours depending on pack</li>
+            <li>Delivery: private gallery link (web + print-ready)</li>
+            <li>Coverage: Sharyland ISD and nearby districts</li>
+            <li>Availability: evenings and game days</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="pricing" class="wrap">
-    <h2>Pricing</h2>
-    <p class="muted">Transparent, simple pricing. Pay via Venmo, Cash App, or Zelle.</p>
-    <div class="prices">
-      <div class="card tier">
-        <span class="pill">Student</span>
-        <h3>Highlight Pack</h3>
-        <div class="price">$15</div>
-        <ul class="clean">
-          <li>3–5 edited photos of one player</li>
-          <li>Web + print-ready files</li>
-          <li>48–72h delivery</li>
-        </ul>
-      </div>
-      <div class="card tier emphasis">
-        <span class="badge-best pulse">⭐ Best Deal</span>
-        <h3>All-Game Pack</h3>
-        <div class="price">$35</div>
-        <ul class="clean">
-          <li>10–15 edited photos of one player</li>
-          <li>Priority edits</li>
-          <li>24–48h delivery</li>
-        </ul>
-      </div>
-      <div class="card tier">
-        <span class="pill">Season</span>
-        <h3>Season Pass (Home Games)</h3>
-        <div class="price">$125</div>
-        <ul class="clean">
-          <li>All home games this season</li>
-          <li>10+ edited photos per game</li>
-          <li>Private gallery link</li>
-        </ul>
-      </div>
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact / Book</h2>
+      <p class="muted">Send the details and I’ll confirm availability plus pricing. Personal use license included; team promo/merch needs a team license.</p>
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="card" style="padding:18px">
+        <div class="col6">
+          <label>Name
+            <input name="name" required placeholder="Parent or Student">
+          </label>
+        </div>
+        <div class="col6">
+          <label>Contact
+            <input name="contact" required placeholder="Email or phone">
+          </label>
+        </div>
+        <div class="col6">
+          <label>Player & # 
+            <input name="player" required placeholder="Name, Jersey #">
+          </label>
+        </div>
+        <div class="col6">
+          <label>Team / School
+            <input name="team" placeholder="e.g., Sharyland MS">
+          </label>
+        </div>
+        <div class="col6">
+          <label>Game Date
+            <input type="date" name="date" required>
+          </label>
+        </div>
+        <div class="col6">
+          <label>Package
+            <select name="package" required>
+              <option value="Highlight $15">Highlight Pack — $15</option>
+              <option value="All-Game $35">All-Game Pack — $35</option>
+              <option value="Season Home">Season Pass (Home) — contact for quote</option>
+            </select>
+          </label>
+        </div>
+        <div class="col12">
+          <label>Notes
+            <textarea name="notes" rows="4" placeholder="Offense, defense, celebrations, specific plays or angles…"></textarea>
+          </label>
+        </div>
+        <div class="col12">
+          <button class="btn" type="submit">Send</button>
+          <span class="note" style="margin-left:10px">You’ll get a reply soon with availability and payment info (Venmo/Cash App/Zelle).</span>
+        </div>
+      </form>
     </div>
-    <p class="note">Personal use only (socials, family prints, recruiting). Team promos, merch, or fundraisers require a separate team license.</p>
-  </section>
-
-  <section id="about" class="wrap">
-    <h2>About Me</h2>
-    <p>Hi, my name is <strong>Iker Guizar</strong>. I'm a student photographer at Sharyland ISD, part of the yearbook class, and currently the Student Council Historian. I love photography — capturing moments that actually mean something — and my goal is to give students and parents great photos at prices that make sense.</p>
-  </section>
-
-  <section id="order" class="wrap">
-    <h2>Order Form</h2>
-    <p class="muted">Submit below and get a payment link + gallery within 1–3 days.</p>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="col6">
-        <label>Name<input name="name" required placeholder="Parent or Student"></label>
-      </div>
-      <div class="col6">
-        <label>Contact<input name="contact" required placeholder="email or phone"></label>
-      </div>
-      <div class="col6">
-        <label>Player & Jersey #<input name="player" required placeholder="John D., #21"></label>
-      </div>
-      <div class="col6">
-        <label>Team<input name="team" placeholder="Sharyland MS Raiders"></label>
-      </div>
-      <div class="col6">
-        <label>Game Date<input name="date" type="date" required></label>
-      </div>
-      <div class="col6">
-        <label>Package<select name="package" required>
-          <option value="Highlight $15">Highlight Pack — $15</option>
-          <option value="All-Game $35">All-Game Pack — $35</option>
-          <option value="Season $125">Season Pass — $125</option>
-        </select></label>
-      </div>
-      <div class="col12">
-        <label>Notes<textarea name="notes" rows="4" placeholder="Key plays, rush edits, etc."></textarea></label>
-      </div>
-      <div class="col12">
-        <button class="btn" type="submit">Submit Order</button>
-        <span class="muted" style="margin-left:10px">You’ll receive a confirmation & payment link shortly.</span>
-      </div>
-    </form>
   </section>
 
   <footer>
-    <div class="wrap">
-      <div>© <span id="y"></span> Iker • Sports Photography · <a href="#order">Book Now</a></div>
-      <div class="muted" style="margin-top:6px">DM for availability. Media pass not required for most RGV leagues.</div>
-    </div>
-    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+    © <span id="y"></span> Iker • Sports Photography · Mission, TX
   </footer>
+
+  <!-- super tiny vanilla lightbox -->
+  <div class="lb" id="lb"><button class="x" id="x">Close ✕</button><img id="lbimg" alt=""></div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
+    document.querySelectorAll('.gallery img').forEach(img=>{
+      img.addEventListener('click',()=>{ lbimg.src = img.src; lbimg.alt = img.alt; lb.classList.add('show'); });
+    });
+    document.getElementById('x').onclick = ()=> lb.classList.remove('show');
+    lb.addEventListener('click',e=>{ if(e.target===lb) lb.classList.remove('show'); });
+  </script>
 </body>
 </html>
